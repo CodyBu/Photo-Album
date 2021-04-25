@@ -18,7 +18,7 @@
             echo $type.'<br>';
             echo $tmpname.'<br>';*/
 
-            $destination = "uploads/".rand().$filesname;        //generate random number & concatinate with filename & store in folder "uploads"
+            $destination = "uploads/".rand().$filename;        //generate random number & concatinate with filename & store in folder "uploads"
             move_uploaded_file($tmpname,$destination);
 
 
