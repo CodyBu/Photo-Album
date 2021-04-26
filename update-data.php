@@ -32,7 +32,8 @@
                     echo"<td>"; echo $rows[3];/*password*/; echo"</td>";
                     echo"<td><img src = '";echo$rows[4];/*filename, at column 4 in the table*/echo"' height = 100, width = 100></td>";
                     echo "<td colspan = '2'><a href = delete.php?id=";echo $rows[0];echo">Delete | </a>";
-                    echo "<a href = update.php?id = ";echo $rows[0];echo">Update</a></td>"; //delete or update user_Id, at column [0]
+                    echo "<a href = update.php?id = ";echo $rows[0];echo">Update |</a>";
+                    echo "<a href = index.php?id = ";echo $rows[0];echo">Register</a></td>"; //delete or update user_Id, at column [0]
                                         
                     echo"</tr>";
 
