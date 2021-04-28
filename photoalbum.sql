@@ -8,7 +8,8 @@ CREATE TABLE ALBUM(
   Album_Cover varchar(50) NOT NULL,
   Album_Title varchar(50) NOT NULL,
   Album_Notes varchar(50) NOT NULL,
-  CONSTRAINT AlbumPK PRIMARY KEY (Album_Id)
+  CONSTRAINT AlbumPK PRIMARY KEY (Album_Id),
+  CONSTRANIT Album_Users_FK FOREIGN KEY (User_Id) REFERENCES USERS (User_Id)
 );
 
 
@@ -18,7 +19,8 @@ CREATE TABLE PICTURES(
   Picture_Image varchar(50) NOT NULL,
   Picture_Title varchar(50) NOT NULL,
   Picture_Note varchar(50) NOT NULL,
-  CONSTRAINT PicturePK PRIMARY KEY (Picture_Id)
+  CONSTRAINT PicturePK PRIMARY KEY (Picture_Id),
+  CONSTRANIT Pictures_Album_FK FOREIGN KEY (Album_Id) REFERENCES ALBUM (Album_Id),
 );
 
 
