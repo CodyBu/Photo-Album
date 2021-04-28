@@ -20,7 +20,7 @@ CREATE TABLE PICTURES(
   Picture_Title varchar(50) NOT NULL,
   Picture_Note varchar(50) NOT NULL,
   CONSTRAINT PicturePK PRIMARY KEY (Picture_Id),
-  CONSTRANIT Pictures_Album_FK FOREIGN KEY (Album_Id) REFERENCES ALBUM (Album_Id),
+  CONSTRANIT Pictures_Album_FK FOREIGN KEY (Album_Id) REFERENCES ALBUM (Album_Id)
 );
 
 
