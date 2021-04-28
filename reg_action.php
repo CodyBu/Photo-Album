@@ -1,44 +1,30 @@
-<html>
-    <body>
+
         <?php
             $name = $_POST['name'];
             $email = $_POST['email'];
             $password = $_POST['password'];
+            $dob = $_POST['dob'];
+            $dom = $_POST['dom'];
 
-            $filename = $_FILES['pic']['name'];
-            $size = $_FILES['pic']['size'];
-            $type = $_FILES['pic']['type'];
+            $filename = $_FILES['pic']['name'];           
             $tmpname = $_FILES['pic']['tmp_name'];
-
-            /*echo $name.'<br>';
-            echo $email.'<br>';
-            echo $password.'<br>';
-            echo $filename.'<br>';
-            echo $size.'<br>';
-            echo $type.'<br>';
-            echo $tmpname.'<br>';*/
 
             $destination = "uploads/".rand().$filename;        //generate random number & concatinate with filename & store in folder "uploads"
             move_uploaded_file($tmpname,$destination);
 
-
             include("connection.php");
 
-            $sql = "INSERT INTO users (user_Name, user_Email, user_Password, user_Picture) VALUES ('$name', '$email', '$password', '$destination');";
+            $sql = "INSERT INTO users (User_Name, User_Email, User_Password, User_Dob, User_Dom, User_Picture) VALUES ('$name', '$email', '$password', '$dob', '$dom', '$destination');";
 
             if($conn->query ($sql) == TRUE){
 
-                echo "New record created successfully";
+                header("location:form1.php?msg=Registration successful");   
 
             }
 
             else{
                 echo "Error".$sql.'<br>'.$conn->error;
             }
+?>
+           
 
-            header("location:form.php?msg=Registration successful");   
-
-
-        ?>
-    </body>
-</html>
