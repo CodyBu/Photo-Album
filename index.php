@@ -20,7 +20,7 @@
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit" value="Login">Sign in</button>
         </form>
-        <p>New User? <a href="form.php">Click Here</a> to create an account!</p>
+        <p>New User? <a href="form1.php">Click Here</a> to create an account!</p>
     </main>
   </body>
 </html>
