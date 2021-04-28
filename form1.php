@@ -18,7 +18,7 @@
 
                     <div class = "form-group">
                         <tr>
-                            <td colspan = "2" align = "center"><h2>User Registration Page</h2></td>
+                            <td colspan = "2" align = "center"><h2>User Registration Form</h2></td>
                         </tr>
                     </div>
 
@@ -64,7 +64,7 @@
                             </tr>
 
                             <tr>
-                                <td><label><h4>Select a domicile</h4></label></td>
+                                <td><label><h4>Residence</h4></label></td>
                                 <td>
                                     <select class = "form-control" name = "dom">
                                         <option value = "NY">New York</option>
