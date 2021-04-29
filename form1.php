@@ -92,6 +92,10 @@
 
                             </tr>
 
+                        <tr>
+                           
+                                <td colspan = "2"><h6>Already have an account?<a href = "index.php"> Click here </a>to login</h6></td>
+                            </tr>
                             
 
 
