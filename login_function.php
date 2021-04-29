@@ -24,27 +24,7 @@
                         </td>
                     </tr>
 
-                    <tr height = "80%">
-                        <td width = "20%">
-                            <table width = "100%">
-                                <tr>
-                                    <td><a href = "Inbox.php">Inbox</a></td>
-                                </tr>
 
-                                <tr>
-                                    <td><a href = "Outbox.php">Outbox</a></td>
-                                </tr>
-
-                                <tr>
-                                    <td><a href = "send_msg.php">Send Message</a></td>
-                                </tr>
-
-                                <tr>
-                                    <td><a href = "signout.php">Sign out</a></td>
-                                </tr>
-
-                            </table>
-                        </td>
 
                         <td><h3>About me:</h3>
                             <p>
