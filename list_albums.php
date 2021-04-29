@@ -52,6 +52,9 @@
                         </form>
                     </div>
                 </table>
+                <div>
+                        <h6 align ="center">Upload pictures to the album press: <a href = "create_picture.php">here</a></h6>
+                </div>
         </div>
     </body>
 </html>
