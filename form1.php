@@ -41,45 +41,37 @@
                     <div class = "form-group">
                             <tr>
                                 <td><label><h4>Name</h4></label></td>
-                                <td><input type = "text" name = "name" class = "form-control" placeholder = "Type your name"></td>
+                                <td><input type = "text" name = "name" class = "form-control" placeholder = "Type your name" required></td>
 
                             </tr>
 
                             <tr>
                                 <td><label><h4>Email</h4></label></td>
-                                <td><input type = "text" name = "email" class = "form-control" placeholder = "Type your email"></td>
+                                <td><input type = "text" name = "email" class = "form-control" placeholder = "Enter your email" pattern = "^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$" required></td>
 
                             </tr>
 
                             <tr>
                                 <td><label><h4>Password</h4></label></td>
-                                <td><input type = "password" name = "password" class = "form-control" placeholder = "Type your password"></td>
+                                <td><input type = "password" name = "password" class = "form-control" placeholder = "Enter your password" required></td>
 
                             </tr>
 
                             <tr>
                                 <td><label><h4>Date of Birth</h4></label></td>
-                                <td><input type = "date" name = "dob" class = "form-control" placeholder = "Type your DOB"></td>
+                                <td><input type = "date" name = "dob" class = "form-control" placeholder = "Enter your DOB" required></td>
 
                             </tr>
 
                             <tr>
                                 <td><label><h4>Residence</h4></label></td>
-                                <td>
-                                    <select class = "form-control" name = "dom">
-                                        <option value = "NY">New York</option>
-                                        <option value = "NJ">New Jersey</option>
-                                        <option value = "CA">California</option>
-                                        <option value = "FL">Florida</option>
-                                        <option value = "WA">Washington</option>
-
-                                </td>
+                                <td><input type = "text" name = "dom" class = "form-control" placeholder = "Enter your residence"></td>
                         
                             </tr>
 
                             <tr>
                                 <td><label><h4>Upload your profile picture</h4></label></td>
-                                <td><input type = "file" name = "pic" class = "form-contro"></td>
+                                <td><input type = "file" name = "pic" required></td>
 
                             </tr>
 
@@ -91,10 +83,6 @@
                                 </td>
 
                             </tr>
-
-                            
-
-
                     </div>
                 </table>
             </form>
