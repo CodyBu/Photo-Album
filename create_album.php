@@ -18,7 +18,7 @@
 
                     <div class = "form-group">
                         <tr>
-                            <td colspan = "2" align = "center"><h2>User Registration Form</h2></td>
+                            <td colspan = "2" align = "center"><h2>Create Album</h2></td>
                         </tr>
                     </div>
 

@@ -83,17 +83,6 @@
                                 </td>
 
                             </tr>
-<<<<<<< HEAD
-=======
-
-                        <tr>
-                           
-                                <td colspan = "2"><h6>Already have an account?<a href = "index.php"> Click here </a>to login</h6></td>
-                            </tr>
-                            
-
-
->>>>>>> d4e374b9587d0232f47525a641e793759d247774
                     </div>
                 </table>
             </form>
