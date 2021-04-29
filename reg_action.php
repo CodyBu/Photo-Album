@@ -6,7 +6,7 @@
     $dob = $_POST['dob'];
     $dom = $_POST['dom'];
 
-    $filename = $_FILES['pic']['name'];           
+    $filename = $_FILES['pic']['name'];
     $tmpname = $_FILES['pic']['tmp_name'];
 
     $destination = "uploads/profile-photos".rand().$filename;        //generate random number & concatinate with filename & store in folder "uploads"
@@ -18,7 +18,7 @@
 
     if($conn->query ($sql) == TRUE){
 
-        header("location:form1.php?msg=Registration successful");   
+        header("location:register.php?msg=Registration successful");
 
     }
 
@@ -26,5 +26,3 @@
         echo "Error".$sql.'<br>'.$conn->error;
     }
 ?>
-           
-

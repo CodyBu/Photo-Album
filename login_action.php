@@ -2,7 +2,7 @@
     session_start();
     $email = $_GET['email'];
     $password = $_GET['password'];
-        
+
 
     include("connection.php");
 
@@ -21,10 +21,10 @@
     $_SESSION['user_id'] = $row['User_Id'];
 
     if($users >0){
-        include("nav.php");
-        include("login_function.php");
+        
+        include("home.php");
     }
-    
+
     else{
         header("location:index.php?msg=User not found");
     }
