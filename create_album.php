@@ -35,6 +35,11 @@
 
                                 
                                 </td>
+                              
+                           
+                                <td colspan = "2"><h6><a href = "create_picture.php">Upload pictures for the album</a></h6></td>
+                            
+
                             </tr>
                     </div>
 
