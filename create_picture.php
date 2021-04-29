@@ -42,13 +42,13 @@
 
                             <tr>
                                 <td><label><h4>Picture Title</h4></label></td>
-                                <td><input type = "text" name = "title" class = "form-control" placeholder = "Enter an album name" required></td>
+                                <td><input type = "text" name = "title" class = "form-control" placeholder = "Enter picture name" required></td>
 
                             </tr>
 
                             <tr>
                                 <td><label><h4>Picture Description</h4></label></td>
-                                <td><input type = "text-field" name = "description" class = "form-control" placeholder = "Enter an album description" required></td>
+                                <td><input type = "text-field" name = "description" class = "form-control" placeholder = "Enter picture description" required></td>
                         
                             </tr>
 
