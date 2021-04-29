@@ -31,7 +31,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="create_album.php">Create Album</a></li>
-            <li><a class="dropdown-item" href="#">View All Albums</a></li>
+            <li><a class="dropdown-item" href="list_albums.php">View All Albums</a></li>
           </ul>
             </li>
             <li class="nav-item">
