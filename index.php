@@ -64,7 +64,7 @@
 
                         <tr>
 
-                           <td colspan = "2"><h6>New User?<a href = "form1.php"> Click here </a>to register</h6></td>
+                           <td colspan = "2"><h6>New User?<a href = "register.php"> Click here </a>to register</h6></td>
                        </tr>
 
                     </div>
