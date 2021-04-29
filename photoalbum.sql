@@ -2,6 +2,17 @@ CREATE DATABASE PhotoAlbum;
 
 USE PhotoAlbum;
 
+CREATE TABLE USERS (
+  User_Id int NOT NULL AUTO_INCREMENT,
+  User_Name text NOT NULL,
+  User_Email varchar(35) NOT NULL,
+  User_Password varchar(35) NOT NULL,
+  User_Dob text NOT NULL,
+  User_Dom varchar(35) NOT NULL,
+  User_Picture varchar(50) NOT NULL,
+  CONSTRAINT UserPK PRIMARY KEY (User_Id)
+);
+
 CREATE TABLE ALBUM(
   Album_Id int NOT NULL AUTO_INCREMENT,
   User_Id int NOT NULL,
@@ -21,16 +32,4 @@ CREATE TABLE PICTURES(
   Picture_Note varchar(50) NOT NULL,
   CONSTRAINT PicturePK PRIMARY KEY (Picture_Id),
   CONSTRAINT Pictures_Album_FK FOREIGN KEY (Album_Id) REFERENCES ALBUM (Album_Id)
-);
-
-
-CREATE TABLE USERS (
-  User_Id int NOT NULL AUTO_INCREMENT,
-  User_Name text NOT NULL,
-  User_Email varchar(35) NOT NULL,
-  User_Password varchar(35) NOT NULL,
-  User_Dob text NOT NULL,
-  User_Dom varchar(35) NOT NULL,
-  User_Picture varchar(50) NOT NULL,
-  CONSTRAINT UserPK PRIMARY KEY (User_Id)
 );
