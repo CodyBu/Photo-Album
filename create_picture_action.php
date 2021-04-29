@@ -9,7 +9,7 @@
     $filename = $_FILES['pic']['name'];           
     $tmpname = $_FILES['pic']['tmp_name'];
 
-    $destination = "uploads/pictures".rand().$filename;        
+    $destination = "uploads/pictures/".rand().$filename;        
     move_uploaded_file($tmpname,$destination);
 
     include("connection.php");
