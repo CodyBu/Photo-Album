@@ -12,12 +12,8 @@
     $users = mysqli_num_rows($results);
     $row = mysqli_fetch_array($results);
 
-
-    $_SESSION['name'] = $row['User_Name'];
     $_SESSION['email'] = $row['User_Email'];
-    $_SESSION['dob'] = $row['User_Dob'];
-    $_SESSION['dom'] = $row['User_Dom'];
-    $_SESSION['pic'] = $row['User_Picture'];
+    $_SESSION['user_id'] = $row['User_Id'];
 
     if($users >0){
         include("nav.php");
