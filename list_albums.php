@@ -24,7 +24,7 @@
 
                     <div class = "form-group">
                         <tr>
-                            <td colspan = "3" align = "center"><h2>Albums</h2></td>
+                            <td colspan = "4" align = "center"><h2>Albums</h2></td>
                         </tr>
                     </div>
 
@@ -32,7 +32,8 @@
                         <tr>
                             <th>Album</th>
                             <th>Description</th>
-                            <th></th>
+                            <th>View</th>
+                            <th colspan = '2'>Action</td>
                         </tr>
                         <form id = "albumForm" action = "view_album.php" method = "post">
                             <?php
@@ -43,9 +44,12 @@
                                 $results = mysqli_query($conn, $sql);
 
                                 while($row = mysqli_fetch_array($results)){
-                                    echo "<tr><td>" . $row['Album_Title'] . "<br><img style='height: 100px; width: 100px;' src='" . $row['Album_Cover'] . "'></td>";
+                                    echo "<tr><td>"."<br><img style='height: 100px; width: 100px;' src='" . $row['Album_Cover'] . "'></td>";
                                     echo "<td>" . $row['Album_Notes'] . "</td>";
-                                    echo "<td><input type='radio' class='btn-check' name='selected' value='" . $row['Album_Id'] . "' id='" . $row['Album_Id'] . "' onclick='submit()'><label class='btn btn-primary' for='" . $row['Album_Id'] . "'>View</label></td></tr>";
+                                    echo "<td><input type='radio' class='btn-check' name='selected' value='" . $row['Album_Id'] . "' id='" . $row['Album_Id'] . "' onclick='submit()'><label class='btn btn-primary' for='" . $row['Album_Id'] . "'>View</label></td>";
+                                    echo "<td colspan = '2'><a href = delete-album.php?id=";echo $row[0];echo">Delete | </a>";
+                                    echo "<a href = update-album.php?id = ";echo $row['Album_Id'];echo">Update</a></td></tr>";    
+
                                 };
                                 
                             ?>
