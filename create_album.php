@@ -35,10 +35,14 @@
 
                                 
                                 </td>
-                              
-                           
-                                <td colspan = "2"><h6><a href = "create_picture.php">Upload pictures for the album</a></h6></td>
-                            
+                                <?php
+                                if ($_GET['msg']!=""){
+                                    echo "<td colspan = '2'><h6><a href = 'create_picture.php'>Upload pictures for the album</a></h6></td>";
+                                }
+                                else{
+                                    echo"";
+                                }
+                                ?>
 
                             </tr>
                     </div>
