@@ -18,7 +18,7 @@
 
     if($conn->query ($sql) == TRUE){
 
-        header("location:register.php?msg=Registration successful");
+        header("location:index.php?msg=Registration successful");
 
     }
 
