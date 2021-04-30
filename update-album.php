@@ -6,14 +6,16 @@
     </head>
 
     <body>
-
+     
         <?php
                 include ("nav.php");
+                 $id = $_GET["id"];
         ?> 
-
+       
   
         <div class = "container">
-            <form name = "form1" method = "post" action = "create_album_action.php" enctype = "multipart/form-data">
+            <form name = "form1" method = "post" action = "execute_update_album.php" enctype = "multipart/form-data">
+                <input type = "hidden" name = "id" value = "<?php echo $id;?>">
                 <table class = "table table-bordered table-striped table-hover">
 
                     <div class = "form-group">
@@ -35,10 +37,7 @@
 
                                 
                                 </td>
-                              
-                           
-                                <td colspan = "2"><h6><a href = "create_picture.php">Upload pictures for the album</a></h6></td>
-                            
+                                                       
 
                             </tr>
                     </div>
@@ -66,7 +65,7 @@
                             <tr>
                                 <td colspan = "2">
                                     <div>
-                                        <input type = "submit" name = "submit" value =  "Create Album">
+                                        <input type = "submit" name = "submit" value =  "Update Album">
                                     </div>
                                 </td>
 
