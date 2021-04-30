@@ -16,6 +16,8 @@
 
   
         <div class = "container">
+            <br>
+          <a class="btn btn-secondary" href="list_albums.php" role="button">Back</a>
                 <table class = "table table-bordered table-striped table-hover">
 
                     <div class = "form-group">
