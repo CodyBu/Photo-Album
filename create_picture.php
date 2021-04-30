@@ -18,7 +18,7 @@
 
                     <div class = "form-group">
                         <tr>
-                            <td colspan = "2" align = "center"><h2>Create Picture</h2></td>
+                            <td colspan = "2" align = "center"><h2>Upload Picture</h2></td>
                         </tr>
                     </div>
 
@@ -59,14 +59,9 @@
                             </tr>
 
                             <tr>
-                           
-                                <td colspan = "2"><h6>Go back to your album <a href = "create_album.php"> Click here </a></h6></td>
-                            </tr>
-
-                            <tr>
                                 <td colspan = "2" align = "center">
                                     <div>
-                                        <input type = "submit" class = "btn btn-primary" name = "submit" value =  "Create Picture">
+                                        <input type = "submit" class = "btn btn-primary" name = "submit" value =  "Upload Picture">
                                     </div>
                                 </td>
 
@@ -75,6 +70,7 @@
 
                     </div>
                 </table>
+
             </form>
         </div>
     </body>
