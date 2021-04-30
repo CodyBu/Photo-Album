@@ -1,23 +1,11 @@
-<html>
+<?php
+    ob_start();
+    $id = $_GET['id'];
+    include('connection.php');
 
-    <body>
-        <?php
-            $id = $_GET['id'];
-            include('connection.php');
+    $sql = "delete from album where Album_Id = '$id'";
 
-            $sql = "delete from album where Album_Id = '$id'";
+    $conn->query($sql);
 
-            if($conn->query($sql) == TRUE){
-                echo "Album deleted";
-
-            }
-
-            else{
-                echo "Error: ".$sql."<br>".$conn->error;
-            }
-
-            header("location:list_albums.php");
-        ?>
-
-    </body>
-</html>
+    header("location:list_albums.php");
+?>

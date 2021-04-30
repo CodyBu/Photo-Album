@@ -20,7 +20,7 @@ CREATE TABLE ALBUM(
   Album_Title varchar(50) NOT NULL,
   Album_Notes varchar(50) NOT NULL,
   CONSTRAINT AlbumPK PRIMARY KEY (Album_Id),
-  CONSTRAINT Album_Users_FK FOREIGN KEY (User_Id) REFERENCES USERS (User_Id)
+  CONSTRAINT Album_Users_FK FOREIGN KEY (User_Id) REFERENCES USERS (User_Id) ON DELETE CASCADE
 );
 
 
@@ -31,5 +31,5 @@ CREATE TABLE PICTURES(
   Picture_Title varchar(50) NOT NULL,
   Picture_Note varchar(50) NOT NULL,
   CONSTRAINT PicturePK PRIMARY KEY (Picture_Id),
-  CONSTRAINT Pictures_Album_FK FOREIGN KEY (Album_Id) REFERENCES ALBUM (Album_Id)
+  CONSTRAINT Pictures_Album_FK FOREIGN KEY (Album_Id) REFERENCES ALBUM (Album_Id) ON DELETE CASCADE
 );
