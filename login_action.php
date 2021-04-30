@@ -26,6 +26,6 @@
     }
 
     else{
-        header("location:home.php?msg=User not found");
+        header("location:index.php?msg=User not found");
     }
 ?>
