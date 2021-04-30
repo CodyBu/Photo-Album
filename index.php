@@ -49,12 +49,12 @@
 
                         <tr>
                             <td><label><h4>Email</h4></label></td>
-                            <td><input type = "email" name = "email" class = "form-control" placeholder = "Type your email"></td>
+                            <td><input type = "email" name = "email" class = "form-control" placeholder = "Type your email" required></td>
                         </tr>
 
                         <tr>
                             <td><label><h4>Password</h4></label></td>
-                            <td><input type = "password" name = "password" class = "form-control" placeholder = "Type your password"></td>
+                            <td><input type = "password" name = "password" class = "form-control" placeholder = "Type your password" required></td>
                         </tr>
 
                         <tr>
