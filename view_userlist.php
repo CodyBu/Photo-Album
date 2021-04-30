@@ -23,6 +23,7 @@
             <th>Location</th>
             <th>User Email</th>
             <th>User Picture</th>
+            <th colspan = "2">Action</th>
             <?php
                 while($rows = mysqli_fetch_array($result)){
                     echo"<tr>";
@@ -30,6 +31,9 @@
                     echo"<td>"; echo $rows[5];/*Location*/; echo"</td>";
                     echo"<td>"; echo $rows[2];/*email*/; echo"</td>";
                     echo"<td><img src = '";echo$rows[6];/*filename, at column 4 in the table*/echo"' height = 100, width = 100></td>";
+                    echo "<td colspan = '2'><a href = delete_user.php?id=";echo $rows[0];echo">Delete | </a>";
+                    echo "<a href = update_user.php?id=";echo $rows[0];echo">Update</a></td>"; 
+
                     echo"</tr>";
                 }
             ?>
