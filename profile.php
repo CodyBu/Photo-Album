@@ -12,6 +12,7 @@
       <?php
               include ("nav.php");
       ?>
+        <div class = "container" style = "padding-top:50px" >
                 <table class = "table table-striped table-hover" width = "100%">
                     <tr height = "15%">
                         <td colspan = "3" align = "center">
@@ -48,6 +49,6 @@
                         <td colspan = "3" align = "center">&copy; All right reserved</td>
                     </tr>
                 </table>
-
+        </div>
     </body>
 </html>
