@@ -15,7 +15,7 @@
               <h1 style="color:blue">Welcome to Photo Album website</h1>
               <h5 style = "color:#000099">You can create your photo album</h5>
               <br>
-              <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;by Cody, Le, Andrew and Eduard</P
+              <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;by Cody Butler, Le Duong, Andrew Halper, and Eduard Antonius</P
                      
        </center>          
         </div>'
