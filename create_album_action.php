@@ -1,23 +1,24 @@
 <?php
     ob_start();
     session_start();
+
     $title = $_POST['title'];
     $description = $_POST['description'];
-    $user = $_SESSION['user_id'];
+    $album = $_SESSION['album_id'];
 
-    $filename = $_FILES['pic']['name'];           
+    $filename = $_FILES['pic']['name'];
     $tmpname = $_FILES['pic']['tmp_name'];
 
-    $destination = "uploads/cover-photos/".rand().$filename;        //generate random number & concatinate with filename & store in folder "uploads"
+    $destination = "uploads/pictures/".rand().$filename;
     move_uploaded_file($tmpname,$destination);
 
     include("connection.php");
 
-    $sql = "INSERT INTO ALBUM (User_Id, Album_Cover, Album_Title, Album_Notes) VALUES ($user, '$destination', '$title', '$description');";
+    $sql = "INSERT INTO PICTURES (Album_Id, Picture_Image, Picture_Title, Picture_Note) VALUES ($album, '$destination', '$title', '$description');";
 
     if($conn->query ($sql) == TRUE){
 
-        header("location:create_album.php?msg=Album Created!");   
+        header("location:create_picture.php?msg=Picture Uploaded!");
 
     }
 
