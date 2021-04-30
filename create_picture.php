@@ -64,9 +64,9 @@
                             </tr>
 
                             <tr>
-                                <td colspan = "2">
+                                <td colspan = "2" align = "center">
                                     <div>
-                                        <input type = "submit" name = "submit" value =  "Create Picture">
+                                        <input type = "submit" class = "btn btn-primary" name = "submit" value =  "Create Picture">
                                     </div>
                                 </td>
 
