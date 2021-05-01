@@ -12,7 +12,8 @@
       ?>
 
       <div class = "container">
-          <form name = "form1" method = "post" action = "reg_action.php" enctype = "multipart/form-data">
+          <form name = "form1" method = "post" action = "updateUserAction.php" enctype = "multipart/form-data">
+              <input type = "hidden" name = "id" value = "<?php echo $id;?>">
               <table class = "table table-bordered table-striped table-hover">
 
                   <div class = "form-group">
@@ -78,6 +79,7 @@
                               <td colspan = "2">
                                   <div>
                                       <input type = "submit" name = "submit" value =  "Update">
+                                      <a href = "update_data.php">View your details</a>
                                   </div>
                               </td>
 
