@@ -18,7 +18,7 @@
 
                     <div class = "form-group">
                         <tr>
-                            <td colspan = "2" align = "center"><h2>Upload Picture</h2></td>
+                            <td colspan = "2" align = "center"><h2>Upload pictures</h2></td>
                         </tr>
                     </div>
 
@@ -35,42 +35,86 @@
 
                                 
                                 </td>
+                                <?php
+
+                                
+                                if ($_GET['msg']!=""){
+                                    echo "<td colspan = '2'><h6><a href = 'view_album.php'>Click here to view the album</a></h6></td>";
+                                }
+                                else{
+                                    echo"";
+                                }
+                                ?>
+
                             </tr>
                     </div>
 
                     <div class = "form-group">
 
+                           
+
                             <tr>
                                 <td><label><h4>Picture Title</h4></label></td>
-                                <td><input type = "text" name = "title" class = "form-control" placeholder = "Enter picture name" required></td>
+                                <td><input type = 'text' name = 'title' class = 'form-control' placeholder = 'Cannot have special characters'></td>
+                                 
+                                
 
                             </tr>
 
                             <tr>
-                                <td><label><h4>Picture Description</h4></label></td>
-                                <td><input type = "text-field" name = "description" class = "form-control" placeholder = "Enter picture description" required></td>
+                                <td><label><h4>Picture Note</h4></label></td>
+                                <td><input type = "text-field" name = "note" class = "form-control" placeholder = "Enter picture note" required></td>
                         
                             </tr>
 
                             <tr>
-                                <td><label><h4>Upload a picture</h4></label></td>
-                                <td><input type = "file" name = "pic" required></td>
+                                <td><label><h4>Upload a cover picture</h4></label></td>
+                                <td><input type = "file" name = "pic" value = "Browse..."   required></td>
 
                             </tr>
 
                             <tr>
-                                <td colspan = "2" align = "center">
-                                    <div>
-                                        <input type = "submit" class = "btn btn-primary" name = "submit" value =  "Upload Picture">
-                                    </div>
+                                <td><label><h4>Select the Album</h4></label></td>
+                                <td>
+                                <?php
+                                    include("connection".php);
+                                    $sql = "select ALBUM.Abum_Title
+                                            from ALBUM.Album_Id, ALBUM.Abum_Title, ALBUM.User_Id, USERS_User_Id
+                                            where ALBUM.User_Id = USERS_User_Id";
+                                    
+                                    $result = mysqli_query($conn, $sql);
+                                    $users = mysqli_num_rows($result);
+                                    
+                                    echo "<input list = 'album' name = 'album_id'>";
+                                    echo "<datalist id = 'albums'>";
+
+                                    for ($i = 0; $i<album; $i ++){
+
+                                        $rows = mysqli_fetch_array($result);
+
+                                        echo "<option value = ";
+                                        echo $rows['Album_Title'];
+                                        echo ">";
+                                    }
+                                        
+                                ?>
+
                                 </td>
 
                             </tr>
 
+                            <tr>
+                                <td colspan = "2">
+                                    <div>
+                                        <input type = "submit" name = "submit" value =  "Upload picture">
+                                    </div>
+                                </td>
 
+                                
+
+                            </tr>
                     </div>
                 </table>
-
             </form>
         </div>
     </body>
