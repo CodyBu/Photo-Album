@@ -19,6 +19,7 @@
     $_SESSION['dom'] = $row['User_Dom'];
     $_SESSION['pic'] = $row['User_Picture'];
     $_SESSION['user_id'] = $row['User_Id'];
+    $_SESSION['album_id'] = $row['Album_Id'];
 
     if($users >0){
         
