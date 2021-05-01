@@ -37,7 +37,7 @@
                                 </td>
                                 <?php
                                 if ($_GET['msg']!=""){
-                                    echo "<td colspan = '2'><h6><a href = 'create_picture.php'>Upload pictures for the album</a></h6></td>";
+                                    echo "<td colspan = '2'><h6><a href = 'view_album.php'>View albums</a></h6></td>";
                                 }
                                 else{
                                     echo"";
