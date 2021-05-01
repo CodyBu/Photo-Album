@@ -9,6 +9,7 @@
 
         <?php
                 include ("nav.php");
+          
         ?> 
 
   
@@ -35,16 +36,8 @@
 
                                 
                                 </td>
-                                <?php
-
-                                
-                                if ($_GET['msg']!=""){
-                                    echo "<td colspan = '2'><h6><a href = 'view_album.php'>Click here to view the album</a></h6></td>";
-                                }
-                                else{
-                                    echo"";
-                                }
-                                ?>
+                                <td><div name = 'album_id'></div></td>
+                             
 
                             </tr>
                     </div>
@@ -69,40 +62,11 @@
 
                             <tr>
                                 <td><label><h4>Upload a cover picture</h4></label></td>
-                                <td><input type = "file" name = "pic" value = "Browse..."   required></td>
+                                <td><input type = "file" name = "pic" required></td>
 
                             </tr>
 
-                            <tr>
-                                <td><label><h4>Select the Album</h4></label></td>
-                                <td>
-                                <?php
-                                    include("connection".php);
-                                    $sql = "select ALBUM.Abum_Title
-                                            from ALBUM.Album_Id, ALBUM.Abum_Title, ALBUM.User_Id, USERS_User_Id
-                                            where ALBUM.User_Id = USERS_User_Id";
-                                    
-                                    $result = mysqli_query($conn, $sql);
-                                    $users = mysqli_num_rows($result);
-                                    
-                                    echo "<input list = 'album' name = 'album_id'>";
-                                    echo "<datalist id = 'albums'>";
-
-                                    for ($i = 0; $i<album; $i ++){
-
-                                        $rows = mysqli_fetch_array($result);
-
-                                        echo "<option value = ";
-                                        echo $rows['Album_Title'];
-                                        echo ">";
-                                    }
-                                        
-                                ?>
-
-                                </td>
-
-                            </tr>
-
+                            
                             <tr>
                                 <td colspan = "2">
                                     <div>
