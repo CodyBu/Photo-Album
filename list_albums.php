@@ -48,7 +48,7 @@
                                     echo "<td>" . $row['Album_Notes'] . "</td>";
                                     echo "<td><input type='radio' class='btn-check' name='selected' value='" . $row['Album_Id'] . "' id='" . $row['Album_Id'] . "' onclick='submit()'><label class='btn btn-primary' for='" . $row['Album_Id'] . "'>View</label></td>";
                                     echo "<td colspan = '2'><a href = delete-album.php?id=";echo $row[0];echo">Delete | </a>";
-                                    echo "<a href = update-album.php?id = ";echo $row[0];echo">Update</a></td></tr>";    
+                                    echo "<a href = update-album.php?id=";echo $row[0];echo">Update</a></td></tr>";    
 
                                 };
                                 
