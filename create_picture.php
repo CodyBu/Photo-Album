@@ -97,6 +97,7 @@
                                 ?>
 
                                 </td>
+                                <td><input type = "file" name = "pic" required></td>
 
                             </tr>
 
