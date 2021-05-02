@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <html>
     <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -9,6 +12,7 @@
 
         <?php
                 include ("nav.php");
+          
         ?> 
 
   
@@ -30,21 +34,22 @@
                                 <td>
                                     <?php
                                         error_reporting(0);
-                                        echo $_GET['msg'];
+                                        echo $_GET['msg']."<br>";
+                                
+                                        if ($_GET['msg']!=""){
+                                            echo "<h6><a href = 'view_album.php'>Click here to view the album</a></h6>";
+                                        }
+                                        else{
+                                            echo"";
+                                        }
+                                        
+
                                     ?>
 
                                 
                                 </td>
-                                <?php
-
-                                
-                                if ($_GET['msg']!=""){
-                                    echo "<td colspan = '2'><h6><a href = 'view_album.php'>Click here to view the album</a></h6></td>";
-                                }
-                                else{
-                                    echo"";
-                                }
-                                ?>
+                                <td><div name = 'album_id'></div></td>
+                             
 
                             </tr>
                     </div>
@@ -77,32 +82,25 @@
                                 <td><label><h4>Select the Album</h4></label></td>
                                 <td>
                                 <?php
-                                    include("connection".php);
-                                    $sql = "select ALBUM.Abum_Title
-                                            from ALBUM.Album_Id, ALBUM.Abum_Title, ALBUM.User_Id, USERS_User_Id
-                                            where ALBUM.User_Id = USERS_User_Id";
+                                    include("connection.php");
+
+                                    $sql = "SELECT Album_Id, Album_Title FROM ALBUM WHERE User_Id = " . $_SESSION['user_id'];
                                     
-                                    $result = mysqli_query($conn, $sql);
-                                    $users = mysqli_num_rows($result);
+                                    $results = mysqli_query($conn, $sql);
                                     
-                                    echo "<input list = 'album' name = 'album_id'>";
-                                    echo "<datalist id = 'albums'>";
+                                    echo "<select name = 'album'>";
 
-                                    for ($i = 0; $i<album; $i ++){
-
-                                        $rows = mysqli_fetch_array($result);
-
-                                        echo "<option value = ";
-                                        echo $rows['Album_Title'];
-                                        echo ">";
+                                    while($row = mysqli_fetch_array($results)){
+                                        echo "<option value = '" . $row['Album_Id'] . "' required>" .  $row['Album_Title'] . "</option>";
                                     }
-                                        
+                                    echo "</select>";
                                 ?>
 
                                 </td>
 
                             </tr>
 
+                            
                             <tr>
                                 <td colspan = "2">
                                     <div>

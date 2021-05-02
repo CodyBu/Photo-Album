@@ -11,28 +11,32 @@
 
         <?php
             include ("nav.php");
-            $_SESSION['album_id'] = $_REQUEST['selected'];
+            //$_SESSION['album_id'] = $_REQUEST['selected'];
         ?> 
 
   
         <div class = "container">
             <br>
-          <a class="btn btn-secondary" href="list_albums.php" role="button">Back</a>
+          <a class="btn btn-secondary" href="profile.php" role="button">Back</a>
                 <table class = "table table-bordered table-striped table-hover">
 
                     <div class = "form-group">
                         <tr>
-                            <td colspan = "2" align = "center"><h2>Albums</h2></td>
+                            <td colspan = "3" align = "center"><h2>Pictures</h2></td>
+                        </tr>
+                        <tr>
+                        <td colspan = "3"><div name = 'album_id'></div></td>
                         </tr>
                     </div>
 
                     <div class = "form-group">
                         <tr>
-                            <td><a href = "create_picture.php">Upload Photos</a></td>
+                            <td colspan = "3"><a href = "create_picture.php">Upload Photos</a></td>
                         </tr>
                         <tr>
                             <th>Picture</th>
                             <th>Description</th>
+                            <th>Modify</th>
                         </tr>
                         <form id = "albumForm" action = "view_album.php" method = "post">
                             <?php
@@ -44,9 +48,13 @@
 
                                 while($row = mysqli_fetch_array($results)){
                                     echo "<tr><td>" . $row['Picture_Title'] . "<br><img style='height: 200px; width: 200px;' src='" . $row['Picture_Image'] . "'></td>";
-                                    echo "<td>" . $row['Picture_Note'] . "</td></tr>";
-                                };
-                                
+                                    echo "<td>" . $row['Picture_Note'] . "</td>";
+                                    echo "<td><a href = delete_picture.php?id=";echo $row[0];echo">Delete | </a>";
+                                    echo "<a href = update_picture.php?id=";echo $row[0];echo">Update</a></td>";
+                                    echo "</tr>";
+                                    
+                                };                        
+                            
                             ?>
                         </form>
                     </div>

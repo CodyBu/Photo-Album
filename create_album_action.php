@@ -8,7 +8,7 @@
     $filename = $_FILES['pic']['name'];           
     $tmpname = $_FILES['pic']['tmp_name'];
 
-    $destination = "uploads/cover-photos/".rand().$filename;        //generate random number & concatinate with filename & store in folder "uploads"
+    $destination = "uploads/cover-photos/".rand().$filename;       
     move_uploaded_file($tmpname,$destination);
 
     include("connection.php");

@@ -2,17 +2,19 @@
     <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-        
+
     </head>
 
     <body>
 
         <?php
                 include ("nav.php");
-        ?> 
+        ?>
 
-  
+
         <div class = "container">
+        <br>
+          <a class="btn btn-secondary" href="profile.php" role="button">Back</a>
             <form name = "form1" method = "post" action = "create_album_action.php" enctype = "multipart/form-data">
                 <table class = "table table-bordered table-striped table-hover">
 
@@ -22,7 +24,7 @@
                         </tr>
                     </div>
 
-                    
+
 
                     <div class = "form-group">
 
@@ -33,16 +35,9 @@
                                         echo $_GET['msg'];
                                     ?>
 
-                                
+
                                 </td>
-                                <?php
-                                if ($_GET['msg']!=""){
-                                    echo "<td colspan = '2'><h6><a href = 'view_album.php'>View albums</a></h6></td>";
-                                }
-                                else{
-                                    echo"";
-                                }
-                                ?>
+
 
                             </tr>
                     </div>
@@ -58,7 +53,7 @@
                             <tr>
                                 <td><label><h4>Album Description</h4></label></td>
                                 <td><input type = "text-field" name = "description" class = "form-control" placeholder = "Enter an album description" required></td>
-                        
+
                             </tr>
 
                             <tr>

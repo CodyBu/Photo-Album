@@ -7,5 +7,5 @@
 
     $conn->query($sql);
 
-    header("location:list_albums.php");
+    header("location:profile.php");
 ?>

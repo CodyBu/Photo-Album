@@ -5,7 +5,7 @@
             $id = $_GET['id'];
             include('connection.php');
 
-            $sql = "delete from users where user_Id = '$id'";
+            $sql = "delete from pictures where picture_Id = '$id'";
 
             if($conn->query($sql) == TRUE){
                 echo "Record deleted";
@@ -16,7 +16,7 @@
                 echo "Error: ".$sql."<br>".$conn->error;
             }
 
-            header("location:update-data.php");
+            header("location:view_album.php");
         ?>
 
     </body>

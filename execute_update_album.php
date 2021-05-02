@@ -19,8 +19,8 @@
 
     if($conn->query($sql)===TRUE)
     {
-        echo "Record updated successfully";
-        header("location:list_albums.php?msg = Record updated");
+        
+        header("location:profile.php?msg = Record updated");
     }
     else{
         echo "Error: ".$sql."<br>".$conn->error;
