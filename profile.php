@@ -28,7 +28,7 @@
                             ?>
                         </td>
                     </tr>
-                        <td><h3>About me:</h3>
+                        <td colspan = "2"><h3>About me:</h3>
                             <p>
                             <?php
 
@@ -37,6 +37,7 @@
                                 echo "My name is: ".$_SESSION['name']."<br>";
                                 echo "My DOB is: ".$_SESSION['dob']."<br>";
                                 echo "I am from: ".$_SESSION['dom']."<br>";
+                                echo "My email is: ".$_SESSION['email']."<br>"."<br>";
                                 echo "<a href = delete_user.php?id=";echo $_SESSION['user_id'];echo">Delete | </a>";
                                 echo "<a href = update_user.php?id=";echo $_SESSION['user_id'];echo">Update</a></td>";
 

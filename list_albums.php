@@ -8,16 +8,23 @@
 
     </head>
 
-    <body>
+<body>
       <?php
               include ("nav.php");
       ?>
+      
+      <div class = "container">
+            <br>
+          <a class="btn btn-secondary" href="profile.php" role="button">Back</a>
+                <table class = "table table-bordered table-striped table-hover">
+
+                    <div class = "form-group">
         
                     <tr height = "5%">
                         <td colspan = "5" align = "center"><h3>ALBUM LISTS</h3></td>
                     </tr>
                         
-                        <div class = "form-group">
+                    <div class = "form-group">
                         
                         <tr align="center">
                             <th style="width:20%">Title</th>
@@ -50,11 +57,10 @@
                         </td>
                     </tr>
 
-                    
-
                     <tr height = "5%">
                         <td colspan = "5" align = "center">&copy; All right reserved</td>
                     </tr>
+                    </div>
                 </table>
         </div>
     </body>
