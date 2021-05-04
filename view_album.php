@@ -11,7 +11,7 @@
 
         <?php
             include ("nav.php");
-            $_SESSION['album_id'] = $_REQUEST['selected'];
+            //$_SESSION['album_id'] = $_REQUEST['selected'];
         ?> 
 
   
