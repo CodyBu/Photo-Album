@@ -27,7 +27,7 @@
             </li>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="list_album.php">Albums</a>
+            <a class="nav-link" href="list_albums.php">Albums</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="signout.php">Logout</a>
