@@ -42,7 +42,7 @@
                                 $results = mysqli_query($conn, $sql);
 
                                 while($row = mysqli_fetch_array($results)){
-                                    echo "<tr><td align = 'center'>".$row[1]."</td>";
+                                    echo "<tr><td align = 'center'>".$_SESSION['name']."</td>";
                                     echo "<td align = 'center'>".$row[3]."</td>";
                                     echo "<td align = 'center'>"."<img style='height: 100px; width: 100px;' src='" . $row['Album_Cover'] . "'></td>";
                                     echo "<td align = 'center'>" . $row['Album_Notes'] . "</td>";
