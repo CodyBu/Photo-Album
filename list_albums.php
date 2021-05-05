@@ -21,33 +21,33 @@
                     <div class = "form-group">
         
                     <tr height = "5%">
-                        <td colspan = "5" align = "center"><h3>ALBUM LISTS</h3></td>
+                        <td colspan = "5" align = "center"><h3>ALBUM LIST</h3></td>
                     </tr>
                         
                     <div class = "form-group">
                         
                         <tr align="center">
-                            <th style="width:20%">Title</th>
-                            <th style="width:20%">Cover Picture</th>
-                            <th style="width:20%">Description</th>
-                            <th style="width:20%">View</th>
+                            <th style="width:15%">User</th>
+                            <th style="width:15%">Title</th>
+                            <th style="width:15%">Cover Picture</th>
+                            <th style="width:15%">Description</th>
+                            <th style="width:20%">View Album</th>
                             
                         </tr>
                         <form id = "albumForm" action = "list_pictures.php" method = "post">
                             <?php
                                 include("connection.php");
 
-                                $sql = "SELECT * FROM ALBUM WHERE User_id = " . $_SESSION['user_id'];
-                            
+                                $sql = "SELECT * FROM ALBUM";                             
                                 $results = mysqli_query($conn, $sql);
 
                                 while($row = mysqli_fetch_array($results)){
-                                    echo "<tr><td align = 'center'>".$row[3]."</td>";
+                                    echo "<tr><td align = 'center'>".$row[1]."</td>";
+                                    echo "<td align = 'center'>".$row[3]."</td>";
                                     echo "<td align = 'center'>"."<img style='height: 100px; width: 100px;' src='" . $row['Album_Cover'] . "'></td>";
                                     echo "<td align = 'center'>" . $row['Album_Notes'] . "</td>";
-                                    echo "<td align = 'center'><input type='radio' class='btn-check' name='selected' value='" . $row['Album_Id'] . "' id='" . $row['Album_Id'] . "' onclick='submit()'><label class='btn btn-primary' for='" . $row['Album_Id'] . "'>View</label></td>";
-                                    
-
+                                    echo "<td align = 'center'><input type='radio' class='btn-check' name='selected' value='" . $row['Album_Id'] . "' id='" . $row['Album_Id'] . "' onclick='submit()'><label class='btn btn-primary' for='" . $row['Album_Id'] . "'>View Album</label></td>";
+                                   
                                 };
                                 
                             ?>
