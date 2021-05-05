@@ -50,9 +50,8 @@
                     <tr>
                                 <td colspan = "5">
                                     <div>
-                                    <a href = "create_album.php">Create new album | </a>
+                                    <a href = "create_album.php">Create new album </a>
                                    
-                                     <a href = "create_picture.php">Upload picture</a>
                                     </div>
                                     
                                 </td>

@@ -39,7 +39,7 @@
                                         echo $_GET['msg']."<br>";
                                 
                                         if ($_GET['msg']!=""){
-                                            echo "<h6><a href = 'view_album.php'>Click here to view the album</a></h6>";
+                                            echo "<h6><a href = 'profile.php'>Click here to view the album</a></h6>";
                                         }
                                         else{
                                             echo"";
