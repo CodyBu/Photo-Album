@@ -25,8 +25,11 @@
                         <tr>
                             <td colspan = "3" align = "center"><h2>
                                 <?php 
-                                    
-                                    echo "<h3>Pictures in Album " .$_SESSION['album_id']. "</h3>"; 
+                                    include("connection.php");
+                                    $sql = "SELECT Album_Title FROM ALBUM WHERE Album_Id =" .$_REQUEST['selected'];
+                                    $results = mysqli_query($conn, $sql);
+                                    $row = mysqli_fetch_array($results);
+                                    echo "<h3>Pictures in Album " .$row['Album_Title']. "</h3>"; 
                                 ?>
                             </td>
                             
