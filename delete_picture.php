@@ -7,6 +7,7 @@
 
             $sql = "delete from pictures where picture_Id = '$id'";
 
+
             if($conn->query($sql) == TRUE){
                 echo "Record deleted";
 
@@ -16,7 +17,7 @@
                 echo "Error: ".$sql."<br>".$conn->error;
             }
 
-            header("location:view_album.php");
+            header("location:profile.php");
         ?>
 
     </body>

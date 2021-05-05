@@ -17,6 +17,8 @@
 
   
         <div class = "container">
+        <br>
+        <a class="btn btn-secondary" href="profile.php" role="button">Back</a>
             <form name = "form1" method = "post" action = "create_picture_action.php" enctype = "multipart/form-data">
                 <table class = "table table-bordered table-striped table-hover">
 
@@ -73,12 +75,6 @@
                             </tr>
 
                             <tr>
-                                <td><label><h4>Upload a cover picture</h4></label></td>
-                                <td><input type = "file" name = "pic" value = "Browse..."   required></td>
-
-                            </tr>
-
-                            <tr>
                                 <td><label><h4>Select the Album</h4></label></td>
                                 <td>
                                 <?php
@@ -97,6 +93,9 @@
                                 ?>
 
                                 </td>
+                            </tr>
+                            <tr>
+                                <td><label><h4>Add picture:</h4></label></td>
                                 <td><input type = "file" name = "pic" required></td>
 
                             </tr>

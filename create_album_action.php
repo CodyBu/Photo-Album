@@ -4,7 +4,7 @@
     $title = $_POST['title'];
     $description = $_POST['description'];
     $user = $_SESSION['user_id'];
-
+  
     $filename = $_FILES['pic']['name'];           
     $tmpname = $_FILES['pic']['tmp_name'];
 
@@ -13,7 +13,7 @@
 
     include("connection.php");
 
-    $sql = "INSERT INTO ALBUM (User_Id, Album_Cover, Album_Title, Album_Notes) VALUES ($user, '$destination', '$title', '$description');";
+    $sql = "INSERT INTO ALBUM (User_Id, Album_Cover, Album_Title, Album_Notes) VALUES ('$user', '$destination', '$title', '$description');";
 
     if($conn->query ($sql) == TRUE){
 

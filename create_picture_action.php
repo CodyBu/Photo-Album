@@ -6,7 +6,7 @@
     $title = $_POST['title'];
     $note = $_POST['note'];
     $album = $_POST['album'];
-    $album = $_SESSION['album_id'];
+  
 
     $filename = $_FILES['pic']['name'];           
     $tmpname = $_FILES['pic']['tmp_name'];
@@ -16,7 +16,7 @@
 
     include("connection.php");
 
-    $sql = "INSERT INTO PICTURES (Album_Id, Picture_Image, Picture_Title, Picture_Note) VALUES ($album, '$destination', '$title', '$note')";
+
     $sql = "INSERT INTO PICTURES (Album_Id, Picture_Image, Picture_Title, Picture_Note) VALUES ('$album', '$destination', '$title', '$note');";
 
     if($conn->query ($sql) == TRUE){
