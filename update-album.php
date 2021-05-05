@@ -14,6 +14,8 @@
        
   
         <div class = "container">
+            <br>
+            <a class="btn btn-secondary" href="profile.php" role="button">Back</a>
             <form name = "form1" method = "post" action = "execute_update_album.php" enctype = "multipart/form-data">
                 <input type = "hidden" name = "id" value = "<?php echo $id;?>">
                 <table class = "table table-bordered table-striped table-hover">

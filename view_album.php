@@ -11,7 +11,8 @@
 
         <?php
             include ("nav.php");
-            //$_SESSION['album_id'] = $_REQUEST['selected'];
+            $_SESSION['album_id'] = $_REQUEST['selected'];
+          
         ?> 
 
   
@@ -22,7 +23,13 @@
 
                     <div class = "form-group">
                         <tr>
-                            <td colspan = "3" align = "center"><h2>Pictures</h2></td>
+                            <td colspan = "3" align = "center"><h2>
+                                <?php 
+                                    
+                                    echo "<h3>Pictures in Album " .$_SESSION['album_id']. "</h3>"; 
+                                ?>
+                            </td>
+                            
                         </tr>
                         <tr>
                         <td colspan = "3"><div name = 'album_id'></div></td>
@@ -38,17 +45,17 @@
                             <th>Description</th>
                             <th>Modify</th>
                         </tr>
-                        <form id = "albumForm" action = "view_album.php" method = "post">
+                        <form>
                             <?php
                                 include("connection.php");
-
-                                $sql = "SELECT * FROM PICTURES WHERE Album_Id = " . $_SESSION['album_id'];
+                                
+                                $sql = "SELECT * FROM PICTURES WHERE Album_Id = " .$_SESSION['album_id'];
                             
                                 $results = mysqli_query($conn, $sql);
 
                                 while($row = mysqli_fetch_array($results)){
-                                    echo "<tr><td>" . $row['Picture_Title'] . "<br><img style='height: 200px; width: 200px;' src='" . $row['Picture_Image'] . "'></td>";
-                                    echo "<td>" . $row['Picture_Note'] . "</td>";
+                                    echo "<tr><td>" . $row[3] . "<br><img style='height: 200px; width: 200px;' src='" . $row[2] . "'></td>";
+                                    echo "<td>" . $row[4] . "</td>";
                                     echo "<td><a href = delete_picture.php?id=";echo $row[0];echo">Delete | </a>";
                                     echo "<a href = update_picture.php?id=";echo $row[0];echo">Update</a></td>";
                                     echo "</tr>";

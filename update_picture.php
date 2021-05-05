@@ -14,6 +14,7 @@
        
   
         <div class = "container">
+        <a class="btn btn-secondary" href="profile.php" role="button">Back</a>
             <form name = "form1" method = "post" action = "execute_update_picture.php" enctype = "multipart/form-data">
             <input type = "hidden" name = "id" value = "<?php echo $id;?>">
                 <table class = "table table-bordered table-striped table-hover">
@@ -62,13 +63,7 @@
                         
                             </tr>
 
-                            <tr>
-                                <td><label><h4>Upload a cover picture</h4></label></td>
-                                <td><input type = "file" name = "pic" required></td>
-
-                            </tr>
-
-                            
+                                                    
                             <tr>
                                 <td colspan = "2">
                                     <div>

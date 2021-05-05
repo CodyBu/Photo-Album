@@ -19,7 +19,7 @@
 
             //echo "Record updated successfully";
             //header("location:update.php?msg=Record updated");
-            header("location:profile.php");
+            header("location:index.php");
     }
     else {
 
