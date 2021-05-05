@@ -38,12 +38,13 @@
                             <?php
                                 include("connection.php");
 
-                                $sql = "SELECT * FROM ALBUM";                             
+                                $sql = "SELECT ALBUM.Album_Title, ALBUM.Album_Cover, ALBUM.Album_Notes, ALBUM.Album_Id, USERS.User_Name FROM ALBUM JOIN USERS ON ALBUM.User_Id = USERS.User_Id";
+                           
                                 $results = mysqli_query($conn, $sql);
 
                                 while($row = mysqli_fetch_array($results)){
-                                    echo "<tr><td align = 'center'>".$_SESSION['name']."</td>";
-                                    echo "<td align = 'center'>".$row[3]."</td>";
+                                    echo "<tr><td align = 'center'>".$row['User_Name']."</td>";
+                                    echo "<td align = 'center'>".$row['Album_Title']."</td>";
                                     echo "<td align = 'center'>"."<img style='height: 100px; width: 100px;' src='" . $row['Album_Cover'] . "'></td>";
                                     echo "<td align = 'center'>" . $row['Album_Notes'] . "</td>";
                                     echo "<td align = 'center'><input type='radio' class='btn-check' name='selected' value='" . $row['Album_Id'] . "' id='" . $row['Album_Id'] . "' onclick='submit()'><label class='btn btn-primary' for='" . $row['Album_Id'] . "'>View Album</label></td>";
