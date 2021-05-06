@@ -4,6 +4,8 @@
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $dob = $_POST['dob'];
+    $dom = $_POST['dom'];
     $filename = $_FILES['pic']['name'];
     $size = $_FILES['pic']['size'];
     $type = $_FILES['pic']['type'];
@@ -13,7 +15,7 @@
     move_uploaded_file($tmpname, $destination);
 
     include('connection.php');
-    $sql = "update users SET user_Name = '$name', user_Email = '$email', user_Password = '$password', user_Picture = '$destination' where user_Id = '$id'";
+    $sql = "update users SET User_Name = '$name', User_Email = '$email', User_Password = '$password', User_Dob = '$dob', User_Dom = '$dom', User_Picture = '$destination' where user_Id = '$id'";
 
     if($conn->query($sql) === TRUE) {
 
