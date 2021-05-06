@@ -80,7 +80,7 @@
                               <td colspan = "2">
                                   <div>
                                       <input type = "submit" name = "submit" value =  "Update">
-                                      <a href = "update_data.php">View your details</a>
+                                   
                                   </div>
                               </td>
 
